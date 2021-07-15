@@ -1,3 +1,4 @@
+# updated!
 # Our Izhikevich cell super class, which has regular spiking parameters
 
 # The lab exercise today is to create two more Izhikevich cell types
