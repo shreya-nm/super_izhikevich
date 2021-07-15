@@ -5,15 +5,13 @@ Created on Wed Jul 14 17:25:07 2021
 
 @author: smahesh
 """
-
 import izhikevich_cells as izh
-import matplotlib.pyplot as plt
-import numpy as np
     
 class ibCell(izh.izhCell):
     def __init__(self, stimVal):
+        """ intrinsically bursting cell is a sub-class of izhCell"""
         super().__init__(stimVal)
-        # defined parameters
+        """these are the defined parameters for intrinsically bursting cell"""
         self.celltype='Intrinsically Bursting'
         self.C = 150
         self.vr = -75
@@ -49,4 +47,5 @@ myCell = ibCell(4000)
 myCell.simulate()
 
 if __name__=='__main__':
+    """if True, it calls the pltting function in izhikevich_cells"""
     izh.plotMyData(myCell)      
